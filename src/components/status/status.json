@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_status_statuses",
+  "info": {
+    "displayName": "status",
+    "icon": "exclamation-circle",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "enumeration",
+      "enum": [
+        "ready",
+        "warning",
+        "error",
+        "dashed",
+        "default",
+        "info",
+        "highlight"
+      ],
+      "required": true,
+      "default": "ready"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

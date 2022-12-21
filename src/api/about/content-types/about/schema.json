@@ -1,0 +1,34 @@
+{
+  "kind": "singleType",
+  "collectionName": "abouts",
+  "info": {
+    "singularName": "about",
+    "pluralName": "abouts",
+    "displayName": "About"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "about": {
+      "type": "text",
+      "required": true
+    },
+    "tech_stacks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tech-stack.tech-stack"
+    },
+    "telegram": {
+      "type": "string",
+      "required": false
+    },
+    "discord": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    }
+  }
+}

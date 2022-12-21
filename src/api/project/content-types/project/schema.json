@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "isPrivate": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": false
+    },
+    "status": {
+      "type": "component",
+      "repeatable": false,
+      "component": "status.status",
+      "required": true
+    },
+    "highlights": {
+      "type": "component",
+      "repeatable": true,
+      "component": "project.highlight",
+      "required": true
+    },
+    "tech_stack": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tech-stack.tech-stack"
+    },
+    "screenshots": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "additional_links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "project.links"
+    }
+  }
+}
